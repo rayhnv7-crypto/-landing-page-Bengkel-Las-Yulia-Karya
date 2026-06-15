@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaya Abadi Las | Jasa Las &amp; Konstruksi Besi Depok</title>
+<meta name="description" content="Jaya Abadi Las - Jasa pembuatan pagar besi, kanopi, teralis, dan konstruksi baja di Depok dan sekitarnya. Survey lokasi, pengerjaan rapi, harga transparan.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+  :root{
+    --bg: #0c0c0e;
+    --bg-alt: #131316;
+    --card: #1a1a1e;
+    --card-light: #1f1f24;
+    --border: rgba(255,255,255,0.07);
+    --text: #f3f3f1;
+    --muted: #9a9aa1;
+    --gold: #c9a35f;
+    --gold-bright: #ddb96f;
+    --gold-gradient: linear-gradient(135deg, #e3c585, #c9a35f 55%, #9c7a3f);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    font-family: 'Inter', sans-serif;
+    background:
+      radial-gradient(900px 560px at 8% 0%, rgba(201,163,95,0.09), transparent 60%),
+      radial-gradient(1000px 700px at 100% 35%, rgba(201,163,95,0.05), transparent 55%),
+      repeating-linear-gradient(135deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 64px),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .display{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section{ padding: 88px 0; }
+
+  @media (max-width: 768px){
+    section{ padding: 60px 0; }
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in-view{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-stagger.in-view > *{
+    animation: fadeUp .7s ease forwards;
+  }
+  .reveal-stagger > *{ opacity: 0; }
+  .reveal-stagger.in-view > *:nth-child(1){ animation-delay: .05s; }
+  .reveal-stagger.in-view > *:nth-child(2){ animation-delay: .12s; }
+  .reveal-stagger.in-view > *:nth-child(3){ animation-delay: .19s; }
+  .reveal-stagger.in-view > *:nth-child(4){ animation-delay: .26s; }
+  .reveal-stagger.in-view > *:nth-child(5){ animation-delay: .33s; }
+  .reveal-stagger.in-view > *:nth-child(6){ animation-delay: .40s; }
+  .reveal-stagger.in-view > *:nth-child(7){ animation-delay: .47s; }
+
+  @keyframes fadeUp{
+    from{ opacity: 0; transform: translateY(24px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .reveal-stagger > *{ opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+  }
+
+  /* ---------- Hero entrance ---------- */
+  .hero-grid > *{
+    opacity: 0;
+    animation: fadeUp .8s ease forwards;
+  }
+  .hero-grid > *:nth-child(1){ animation-delay: .1s; }
+  .hero-grid > *:nth-child(2){ animation-delay: .3s; }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero-grid > *{ opacity: 1; animation: none; }
+  }
+
+  /* ---------- Eyebrow / labels ---------- */
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .eyebrow::before{
+    content:"";
+    display:block;
+    width: 22px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-head{
+    max-width: 620px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+  .section-head h2{
+    font-size: clamp(26px, 3.2vw, 36px);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .section-head p{
+    color: var(--muted);
+    font-size: 15.5px;
+  }
+  .section-head.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .section-head.center .eyebrow::before{ display:none; }
+
+  /* ---------- Section number watermark ---------- */
+  .section-num{
+    position: absolute;
+    top: -54px; right: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(201,163,95,0.16);
+    letter-spacing: 0.05em;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  .section-head.center .section-num{
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    top: -60px;
+  }
+  @media (max-width: 768px){
+    .section-num{ font-size: 64px; top: -38px; }
+  }
+
+  /* ---------- Section divider ---------- */
+  .divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 14px;
+    padding: 0;
+  }
+  .divider .line{
+    height: 1px;
+    flex: 1;
+    max-width: 220px;
+    background: linear-gradient(90deg, transparent, rgba(201,163,95,0.5));
+  }
+  .divider .line.right{
+    background: linear-gradient(90deg, rgba(201,163,95,0.5), transparent);
+  }
+  .divider .diamond{
+    width: 8px; height: 8px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+  .divider .diamond::after{
+    content:"";
+    display:block;
+    width:2px; height:2px;
+    margin: 2px auto 0;
+    background: var(--gold);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14.5px;
+    text-decoration: none;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    overflow: hidden;
+  }
+  .btn-primary{
+    background: var(--gold);
+    color: #1a1406;
+  }
+  .btn-primary::before{
+    content:"";
+    position:absolute; top:0; left:-75%;
+    width: 50%; height:100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+    transform: skewX(-20deg);
+    transition: left .6s ease;
+  }
+  .btn-primary:hover{
+    background: var(--gold-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(201,163,95,0.35);
+  }
+  .btn-primary:hover::before{ left: 130%; }
+
+  .btn-outline{
+    border-color: rgba(255,255,255,0.18);
+    color: var(--text);
+  }
+  .btn-outline:hover{
+    border-color: var(--gold);
+    color: var(--gold-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  }
+
+  /* ---------- Top utility bar ---------- */
+  .topbar{
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .topbar::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background: var(--gold-gradient);
+  }
+  .topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 38px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .topbar-inner .topbar-item{
+    display:flex; align-items:center; gap:8px;
+  }
+  .topbar-inner svg{ width:13px; height:13px; color: var(--gold); }
+
+  @media (max-width: 768px){
+    .topbar-inner .topbar-item:last-child{ display:none; }
+  }
+
+  /* ---------- Navbar ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(12,12,14,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 76px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text);
+    text-decoration:none;
+  }
+  .logo span{ color: var(--gold); }
+  .logo .mark{
+    width: 38px; height: 38px;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    display:flex; align-items:center; justify-content:center;
+    color: var(--gold);
+  }
+  .nav-links{
+    display:flex;
+    gap: 36px;
+    list-style:none;
+  }
+  .nav-links a{
+    position: relative;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color .2s;
+    padding-bottom: 4px;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute; left:0; bottom:0;
+    width:0; height:1px;
+    background: var(--gold);
+    transition: width .25s ease;
+  }
+  .nav-links a:hover{ color: var(--text); }
+  .nav-links a:hover::after{ width:100%; }
+
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-phone{
+    display:flex; align-items:center; gap:8px;
+    color: var(--muted); font-size: 14px; font-weight: 500;
+  }
+
+  @media (max-width: 860px){
+    .nav-links, .nav-phone{ display:none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 90px;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(201,163,95,0.10), transparent 60%),
+      linear-gradient(180deg, #0c0c0e 0%, #0c0c0e 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero h1{
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 600;
+    line-height: 1.16;
+    margin-bottom: 22px;
+    color: var(--text);
+    letter-spacing: -0.015em;
+  }
+  .hero h1 em{
+    font-style: normal;
+    position: relative;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero h1 em::after{
+    content:"";
+    position:absolute; left:2px; right:2px; bottom:2px;
+    height: 8px;
+    background: rgba(201,163,95,0.16);
+    z-index:-1;
+  }
+  .hero p.lead{
+    color: var(--muted);
+    font-size: 16.5px;
+    max-width: 480px;
+    margin-bottom: 32px;
+  }
+  .hero-actions{ display:flex; gap:14px; flex-wrap: wrap; margin-bottom: 40px; }
+
+  .hero-meta{
+    display:flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .hero-meta .item{
+    display:flex; align-items:center; gap:10px;
+    font-size: 13.5px; color: var(--muted);
+  }
+  .hero-meta .item strong{ color: var(--text); font-weight: 600; }
+  .hero-meta svg{ color: var(--gold); width:18px; height:18px; }
+
+  .hero-visual-wrap{
+    position: relative;
+    padding: 18px;
+  }
+  .hero-visual-wrap::before,
+  .hero-visual-wrap::after,
+  .hero-visual-wrap .corner-tl,
+  .hero-visual-wrap .corner-br{
+    content:"";
+    position:absolute;
+    width: 46px; height: 46px;
+    border: 1px solid var(--gold);
+    z-index: 1;
+  }
+  .hero-visual-wrap::before{
+    top:0; left:0;
+    border-right:none; border-bottom:none;
+  }
+  .hero-visual-wrap::after{
+    bottom:0; right:0;
+    border-left:none; border-top:none;
+  }
+  .hero-visual{
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(201,163,95,0.25);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    aspect-ratio: 4/5;
+  }
+  .hero-visual img{
+    width:100%; height:100%; object-fit: cover; object-position: center 30%; display:block;
+  }
+  .hero-visual::after{
+    content:"";
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(12,12,14,0) 55%, rgba(12,12,14,0.9) 100%);
+  }
+  .hero-visual .tag{
+    position:absolute; bottom: 22px; left: 22px; right: 22px;
+    z-index: 2;
+    color: #fff;
+  }
+  .hero-visual .tag .small{
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold-bright); font-weight:600; margin-bottom: 6px;
+  }
+  .hero-visual .tag .big{
+    font-family:'Poppins',sans-serif; font-size: 19px; font-weight:600;
+  }
+
+  /* Floating rating badge */
+  .hero-badge{
+    position: absolute;
+    bottom: -22px; left: 36px;
+    z-index: 3;
+    display:flex; align-items:center; gap:12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 20px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+  }
+  .hero-badge .stars{
+    display:flex; align-items:center; justify-content:center;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    color: #1a1406;
+    flex-shrink:0;
+  }
+  .hero-badge .stars svg{ width:20px; height:20px; }
+  .hero-badge .num{
+    font-family:'Poppins',sans-serif;
+    font-size: 20px; font-weight:700; color: var(--text); line-height:1.1;
+  }
+  .hero-badge .label{ font-size:12px; color: var(--muted); }
+
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero-visual-wrap{ order:-1; }
+    .hero-visual{ aspect-ratio: 16/10; }
+    .hero-badge{ left: 24px; }
+  }
+  @media (max-width: 480px){
+    .hero-visual-wrap{ padding: 12px; }
+    .hero-visual-wrap::before, .hero-visual-wrap::after{ width:30px; height:30px; }
+    .hero-badge{ padding: 10px 14px; gap:10px; bottom:-18px; }
+    .hero-badge .stars{ width:36px; height:36px; }
+    .hero-badge .num{ font-size:16px; }
+  }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .about-img-wrap{ position: relative; padding: 18px; }
+  .about-img-wrap::before,
+  .about-img-wrap::after{
+    content:"";
+    position:absolute;
+    width: 46px; height: 46px;
+    border: 1px solid var(--gold);
+    z-index: 1;
+  }
+  .about-img-wrap::before{ top:0; right:0; border-left:none; border-bottom:none; }
+  .about-img-wrap::after{ bottom:0; left:0; border-right:none; border-top:none; }
+  .about-img{
+    border-radius: 10px;
+    overflow:hidden;
+    border: 1px solid var(--border);
+    aspect-ratio: 4/5;
+    background: #15151a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .about-img img{ width:100%; height:100%; object-fit:contain; display:block; }
+
+  @media (max-width: 480px){
+    .about-img-wrap{ padding: 12px; }
+    .about-img-wrap::before, .about-img-wrap::after{ width:30px; height:30px; }
+  }
+
+  .about-text h2{
+    font-size: clamp(26px, 3.2vw, 36px);
+    font-weight:600;
+    margin-bottom: 18px;
+  }
+  .about-text p{
+    color: var(--muted);
+    font-size: 15.5px;
+    margin-bottom: 16px;
+  }
+  .check-list{
+    list-style:none;
+    margin-top: 28px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 20px;
+  }
+  .check-list li{
+    display:flex; align-items:center; gap:10px;
+    font-size: 14.5px; font-weight:500; color: var(--text);
+  }
+  .check-list svg{ color: var(--gold); width:18px; height:18px; flex-shrink:0; }
+
+  @media (max-width: 860px){
+    .about-grid{ grid-template-columns: 1fr; gap: 36px; }
+    .about-img{ aspect-ratio: 16/10; }
+    .check-list{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px){
+    .check-list{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Trust section ---------- */
+  .trust{ background: var(--bg-alt); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .trust-grid{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+  .trust-card{
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 20px;
+    text-align: center;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    overflow: hidden;
+  }
+  .trust-card::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background: var(--gold-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+  }
+  .trust-card:hover::before{ transform: scaleX(1); }
+  .trust-card:hover{
+    transform: translateY(-6px);
+    border-color: rgba(201,163,95,0.35);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+  }
+  .trust-card .icon-circle{
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(201,163,95,0.18), rgba(201,163,95,0.05));
+    border: 1px solid rgba(201,163,95,0.3);
+    display:flex; align-items:center; justify-content:center;
+    margin: 0 auto 16px;
+    transition: transform .35s ease, background .35s ease;
+  }
+  .trust-card:hover .icon-circle{
+    transform: scale(1.1) rotate(-6deg);
+    background: var(--gold-gradient);
+  }
+  .trust-card svg{ color: var(--gold); width:24px; height:24px; transition: color .35s ease; }
+  .trust-card:hover svg{ color: #1a1406; }
+  .trust-card h4{
+    font-family:'Poppins',sans-serif;
+    font-size: 16px; font-weight: 600; color: var(--text);
+    margin-bottom: 6px;
+  }
+  .trust-card p{ font-size: 13px; color: var(--muted); }
+  .trust-card a.gmap-link{
+    display:inline-block; margin-top:10px;
+    font-size: 12.5px; font-weight:600; color: var(--gold);
+    text-decoration:none; border-bottom: 1px solid rgba(201,163,95,0.4);
+  }
+
+  @media (max-width: 980px){
+    .trust-grid{ grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 600px){
+    .trust-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ---------- Services ---------- */
+  .services-primary{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 56px;
+  }
+  .service-feature{
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    padding: 32px 28px;
+    display:flex;
+    flex-direction:column;
+    gap: 16px;
+    overflow: hidden;
+    transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .service-feature::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background: var(--gold-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+  }
+  .service-feature:hover::before{ transform: scaleX(1); }
+  .service-feature .index{
+    position:absolute; top:18px; right:22px;
+    font-family:'Poppins',sans-serif;
+    font-size: 13px; font-weight:600;
+    color: rgba(201,163,95,0.5);
+    letter-spacing: 0.1em;
+  }
+  .service-feature:hover{
+    border-color: rgba(201,163,95,0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+  }
+  .service-feature .icon-wrap{
+    width: 48px; height:48px;
+    border-radius: 8px;
+    background: rgba(201,163,95,0.1);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--gold);
+    transition: background .3s ease, transform .3s ease;
+  }
+  .service-feature:hover .icon-wrap{
+    background: var(--gold);
+    color: #1a1406;
+    transform: rotate(-6deg) scale(1.08);
+  }
+  .service-feature .icon-wrap svg{ width:24px; height:24px; }
+  .service-feature .link svg{ transition: transform .25s ease; }
+  .service-feature .link:hover svg{ transform: translateX(4px); }
+  .service-feature h3{ font-size: 19px; font-weight:600; color: var(--text); }
+  .service-feature p{ font-size: 14px; color: var(--muted); flex-grow:1; }
+  .service-feature .link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size: 13px; font-weight:600; color: var(--gold);
+    text-decoration:none;
+  }
+  .service-feature .link:hover{ color: var(--gold-bright); }
+
+  .subhead{
+    font-size: 12.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+
+  .services-secondary{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .service-mini{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 18px;
+    display:flex; flex-direction:column; gap: 14px;
+    transition: border-color .3s ease, transform .3s ease;
+  }
+  .service-mini:hover{
+    border-color: rgba(201,163,95,0.4);
+    transform: translateY(-4px);
+  }
+  .service-mini svg{ color: var(--gold); width:24px; height:24px; transition: transform .3s ease; }
+  .service-mini:hover svg{ transform: scale(1.15); }
+  .service-mini h4{ font-size:15px; font-weight:600; color: var(--text); }
+
+  @media (max-width: 900px){
+    .services-primary{ grid-template-columns: 1fr 1fr; }
+    .services-secondary{ grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 620px){
+    .services-primary{ grid-template-columns: 1fr; }
+    .services-secondary{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ---------- Process ---------- */
+  .process{ background: var(--bg-alt); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .process-track{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    position: relative;
+  }
+  .process-step{
+    text-align:center;
+    position: relative;
+    padding-top: 8px;
+  }
+  .process-step .circle{
+    width: 46px; height:46px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid rgba(201,163,95,0.4);
+    color: var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Poppins',sans-serif; font-weight:600; font-size:16px;
+    margin: 0 auto 16px;
+    position: relative;
+    z-index: 2;
+    transition: background .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .process-step:hover .circle{
+    background: var(--gold);
+    color: #1a1406;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(201,163,95,0.12);
+  }
+  .process-step h4{ font-size: 14.5px; font-weight:600; margin-bottom:6px; }
+  .process-step p{ font-size: 12.5px; color: var(--muted); }
+
+  .process-line{
+    position:absolute;
+    top: 31px;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: rgba(201,163,95,0.25);
+    z-index:1;
+  }
+
+  @media (max-width: 900px){
+    .process-track{ grid-template-columns: repeat(3, 1fr); gap: 32px 16px; }
+    .process-line{ display:none; }
+  }
+  @media (max-width: 560px){
+    .process-track{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ---------- Portfolio (masonry) ---------- */
+  .masonry{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .masonry .item{
+    border-radius: 10px;
+    overflow:hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    aspect-ratio: 3/4;
+    transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .masonry .item:hover{
+    transform: translateY(-6px);
+    border-color: rgba(201,163,95,0.35);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.4);
+  }
+  .masonry .item img{
+    width:100%; height:100%; object-fit: cover; display:block;
+    transition: transform .5s ease;
+  }
+  .masonry .item:hover img{ transform: scale(1.08); }
+  .masonry .item .label{
+    position:absolute; left:0; right:0; bottom:0;
+    padding: 14px 16px;
+    font-size: 13px; font-weight:600; color:#fff;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.75));
+    z-index: 2;
+    transition: transform .35s ease;
+  }
+  .masonry .item:hover .label{ transform: translateY(-2px); }
+  .masonry .item .zoom-icon{
+    position:absolute; top:50%; left:50%;
+    width: 46px; height:46px;
+    border-radius:50%;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(12,12,14,0.45);
+    backdrop-filter: blur(4px);
+    display:flex; align-items:center; justify-content:center;
+    color:#fff;
+    z-index: 2;
+    transform: translate(-50%,-50%) scale(0.6);
+    opacity: 0;
+    transition: opacity .3s ease, transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .masonry .item .zoom-icon svg{ width:18px; height:18px; }
+  .masonry .item:hover .zoom-icon{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    border-color: var(--gold);
+    background: rgba(201,163,95,0.18);
+  }
+  .masonry .item.cta-card{
+    background: var(--card);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap: 12px;
+    padding: 24px 20px;
+    text-decoration:none;
+  }
+  .masonry .item.cta-card:hover{ border-color: rgba(201,163,95,0.4); }
+  .masonry .item.cta-card svg{ color: var(--gold); width:28px; height:28px; transition: transform .3s ease; }
+  .masonry .item.cta-card:hover svg{ transform: scale(1.15) rotate(8deg); }
+  .masonry .item.cta-card h4{ color:#fff; font-size:15px; font-weight:600; }
+  .masonry .item.cta-card p{ color: var(--muted); font-size:13px; }
+
+  @media (max-width: 900px){ .masonry{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px){ .masonry{ grid-template-columns: 1fr; } }
+
+  /* ---------- CTA banner ---------- */
+  .cta-banner{
+    position: relative;
+    border-radius: 14px;
+    border: 1px solid rgba(201,163,95,0.35);
+    background: linear-gradient(135deg, rgba(201,163,95,0.10), rgba(201,163,95,0.02));
+    padding: 56px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .cta-banner::before{
+    content:"";
+    position:absolute;
+    top:-60%; right:-10%;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(201,163,95,0.18), transparent 65%);
+    pointer-events:none;
+  }
+  .cta-banner > *{ position: relative; z-index: 1; }
+  .cta-banner h2{
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 600;
+    max-width: 520px;
+    margin-bottom: 8px;
+  }
+  .cta-banner p{ color: var(--muted); font-size: 14.5px; }
+
+  @media (max-width: 700px){
+    .cta-banner{ padding: 36px 24px; text-align:center; justify-content:center; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer{ position:relative; background: var(--bg-alt); border-top: 1px solid var(--border); padding-top: 64px; }
+  footer::before{
+    content:"";
+    position:absolute; top:-1px; left:0; right:0; height:2px;
+    background: var(--gold-gradient);
+  }
+  .footer-social{ display:flex; gap:10px; margin-top: 20px; }
+  .footer-social a{
+    width: 38px; height:38px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--muted);
+    transition: border-color .25s ease, color .25s ease, transform .25s ease;
+  }
+  .footer-social a:hover{
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .footer-social svg{ width:16px; height:16px; }
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-grid h4{
+    font-size: 12.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .footer-grid ul{ list-style:none; display:flex; flex-direction:column; gap:11px; }
+  .footer-grid ul li a, .footer-grid ul li{
+    color: var(--muted); font-size: 14px; text-decoration:none;
+  }
+  .footer-grid ul li a:hover{ color: var(--text); }
+  .footer-brand .logo{ margin-bottom: 16px; }
+  .footer-brand p{ color: var(--muted); font-size: 14px; max-width: 320px; margin-bottom: 18px; }
+  .footer-contact li{ display:flex; gap:10px; align-items:flex-start; }
+  .footer-contact svg{ color: var(--gold); width:17px; height:17px; flex-shrink:0; margin-top:2px; }
+
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 22px 0;
+    font-size: 13px; color: var(--muted);
+    flex-wrap: wrap; gap: 10px;
+  }
+
+  @media (max-width: 900px){
+    .footer-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px){
+    .footer-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Floating WhatsApp ---------- */
+  .wa-float{
+    position: fixed;
+    bottom: 24px; right: 24px;
+    z-index: 60;
+    display:flex; align-items:center; gap:10px;
+    background: #1f9e54;
+    color:#fff;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration:none;
+    font-weight:600;
+    font-size: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    transition: transform .25s ease, box-shadow .25s ease;
+    animation: wa-bounce 3.5s ease-in-out infinite;
+  }
+  .wa-float::before{
+    content:"";
+    position:absolute; inset:0;
+    border-radius: 50px;
+    background: #1f9e54;
+    animation: wa-pulse 2.4s ease-out infinite;
+    z-index: -1;
+  }
+  .wa-float:hover{
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    animation-play-state: paused;
+  }
+
+  @keyframes wa-pulse{
+    0%{ opacity: .55; transform: scale(1); }
+    80%{ opacity: 0; transform: scale(1.35); }
+    100%{ opacity: 0; transform: scale(1.35); }
+  }
+  @keyframes wa-bounce{
+    0%, 80%, 100%{ transform: translateY(0); }
+    90%{ transform: translateY(-6px); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .wa-float, .wa-float::before{ animation: none; }
+  }
+
+  @media (max-width: 560px){
+    .wa-float span{ display:none; }
+    .wa-float{ padding: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-item"><i data-lucide="map-pin"></i> Melayani Depok, Sawangan, Cinere &amp; Sekitarnya</div>
+    <div class="topbar-item"><i data-lucide="badge-check"></i> Survey Lokasi Gratis &middot; Konsultasi via WhatsApp</div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <span class="mark"><i data-lucide="flame"></i></span>
+      Jaya Abadi <span>Las</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#portofolio">Portofolio</a></li>
+      <li><a href="#proses">Proses</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <div class="nav-cta">
+      <div class="nav-phone">
+        <i data-lucide="phone" style="width:16px;height:16px;color:var(--gold);"></i>
+        0812-3456-7890
+      </div>
+      <a href="https://wa.me/6281234567890?text=Halo%20Jaya%20Abadi%20Las%2C%20saya%20ingin%20bertanya%20mengenai%20jasa%20las%20%2F%20konstruksi%20besi." class="btn btn-primary" target="_blank">
+        <i data-lucide="message-circle" style="width:17px;height:17px;"></i>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Jasa Las &amp; Konstruksi Besi Depok</div>
+      <h1>Pagar, Kanopi &amp; Konstruksi Besi yang <em>Rapi</em>, Kuat, dan Tepat Waktu</h1>
+      <p class="lead">Jaya Abadi Las melayani pembuatan dan pemasangan pagar besi, kanopi, teralis, hingga konstruksi baja untuk rumah dan usaha di Depok dan sekitarnya — mulai dari survey lokasi hingga selesai pemasangan.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/6281234567890?text=Halo%20Jaya%20Abadi%20Las%2C%20saya%20ingin%20konsultasi%20dan%20survey%20lokasi." class="btn btn-primary" target="_blank">
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+          Konsultasi via WhatsApp
+        </a>
+        <a href="#portofolio" class="btn btn-outline">Lihat Hasil Pekerjaan</a>
+      </div>
+      <div class="hero-meta">
+        <div class="item"><i data-lucide="star"></i> <strong>4.8</strong> Rating Google</div>
+        <div class="item"><i data-lucide="calendar-check"></i> Buka <strong>7 Hari</strong> Seminggu</div>
+        <div class="item"><i data-lucide="map-pin"></i> Survey ke <strong>Lokasi Anda</strong></div>
+      </div>
+    </div>
+    <div class="hero-visual-wrap">
+      <div class="hero-visual">
+        <img src="images/hero-staircase.jpg" alt="Hasil pengerjaan konstruksi besi Jaya Abadi Las">
+        <div class="tag">
+          <div class="small">Hasil Pengerjaan</div>
+          <div class="big">Tangga Spiral &amp; Konstruksi Besi</div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <div class="stars"><i data-lucide="star"></i></div>
+        <div>
+          <div class="num">4.8 / 5</div>
+          <div class="label">Rating Google &middot; 48 Ulasan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="tentang">
+  <div class="container about-grid reveal-stagger">
+    <div class="about-img-wrap">
+      <div class="about-img">
+        <img src="images/about-workshop.jpg" alt="Workshop dan hasil pengerjaan Jaya Abadi Las">
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="eyebrow">Tentang Kami</div>
+      <h2>Bengkel Las &amp; Konstruksi Besi Terpercaya di Depok</h2>
+      <p>Jaya Abadi Las mengerjakan pembuatan pagar besi, kanopi, teralis, dan konstruksi baja sesuai ukuran dan desain yang dibutuhkan, baik untuk rumah tinggal, ruko, maupun gedung di area Depok.</p>
+      <p>Setiap pekerjaan ditangani langsung oleh tim yang berpengalaman di lapangan, dengan komunikasi yang jelas mulai dari survey, penawaran harga, hingga pemasangan selesai.</p>
+      <ul class="check-list">
+        <li><i data-lucide="check-circle-2"></i> Pengerjaan Rapi</li>
+        <li><i data-lucide="check-circle-2"></i> Responsif</li>
+        <li><i data-lucide="check-circle-2"></i> Harga Transparan</li>
+        <li><i data-lucide="check-circle-2"></i> Melayani Depok &amp; Sekitarnya</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="trust">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="section-num">01</span>
+      <div class="eyebrow" style="justify-content:center;">Kenapa Memilih Kami</div>
+      <h2>Mengapa Memilih Jaya Abadi Las</h2>
+    </div>
+    <div class="trust-grid reveal-stagger">
+      <div class="trust-card">
+        <div class="icon-circle"><i data-lucide="star"></i></div>
+        <h4>4.8 / 5 Rating Google</h4>
+        <p>Dari penilaian pelanggan kami</p>
+        <a class="gmap-link" href="https://www.google.com/maps/search/?api=1&query=Jaya+Abadi+Las+Depok" target="_blank">Lihat di Google Maps</a>
+      </div>
+      <div class="trust-card">
+        <div class="icon-circle"><i data-lucide="message-square-text"></i></div>
+        <h4>48 Ulasan Pelanggan</h4>
+        <p>Ulasan asli dari pelanggan yang sudah kami layani</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon-circle"><i data-lucide="calendar-check"></i></div>
+        <h4>Buka 7 Hari</h4>
+        <p>Setiap hari, pukul 08:00 - 17:00</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon-circle"><i data-lucide="map-pin"></i></div>
+        <h4>Survey Lokasi Gratis</h4>
+        <p>Untuk area Depok dan sekitarnya</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon-circle"><i data-lucide="hard-hat"></i></div>
+        <h4>Tim Berpengalaman</h4>
+        <p>Pengerjaan langsung oleh tukang las kami</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="layanan">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-num">02</span>
+      <div class="eyebrow">Layanan Kami</div>
+      <h2>Layanan Utama</h2>
+      <p>Tiga layanan yang paling banyak kami kerjakan untuk kebutuhan rumah dan usaha.</p>
+    </div>
+
+    <div class="services-primary reveal-stagger">
+      <div class="service-feature">
+        <span class="index">01</span>
+        <div class="icon-wrap"><i data-lucide="fence"></i></div>
+        <h3>Pagar Besi</h3>
+        <p>Pagar besi minimalis maupun klasik, dibuat sesuai ukuran dan desain rumah, dengan finishing cat tahan cuaca.</p>
+        <a class="link" href="#portofolio">Lihat hasil pekerjaan <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+      </div>
+      <div class="service-feature">
+        <span class="index">02</span>
+        <div class="icon-wrap"><i data-lucide="warehouse"></i></div>
+        <h3>Kanopi</h3>
+        <p>Kanopi baja ringan maupun konvensional untuk carport, teras, dan area usaha, dengan pilihan atap sesuai kebutuhan.</p>
+        <a class="link" href="#portofolio">Lihat hasil pekerjaan <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+      </div>
+      <div class="service-feature">
+        <span class="index">03</span>
+        <div class="icon-wrap"><i data-lucide="grid-3x3"></i></div>
+        <h3>Teralis</h3>
+        <p>Teralis jendela dan pintu untuk keamanan tambahan, dengan desain rapi yang menyesuaikan tampilan rumah.</p>
+        <a class="link" href="#portofolio">Lihat hasil pekerjaan <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+      </div>
+    </div>
+
+    <div class="subhead reveal">Layanan Lainnya</div>
+
+    <div class="services-secondary reveal-stagger">
+      <div class="service-mini">
+        <i data-lucide="fold-horizontal"></i>
+        <h4>Folding Gate</h4>
+      </div>
+      <div class="service-mini">
+        <i data-lucide="door-closed"></i>
+        <h4>Rolling Door</h4>
+      </div>
+      <div class="service-mini">
+        <i data-lucide="rotate-cw"></i>
+        <h4>Tangga Spiral</h4>
+      </div>
+      <div class="service-mini">
+        <i data-lucide="grip-vertical"></i>
+        <h4>Railing Tangga</h4>
+      </div>
+      <div class="service-mini">
+        <i data-lucide="tower-control"></i>
+        <h4>Menara Air</h4>
+      </div>
+      <div class="service-mini">
+        <i data-lucide="building-2"></i>
+        <h4>Konstruksi Baja</h4>
+      </div>
+      <div class="service-mini">
+        <i data-lucide="frame"></i>
+        <h4>Kusen Aluminium</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="proses">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="section-num">03</span>
+      <div class="eyebrow" style="justify-content:center;">Alur Pengerjaan</div>
+      <h2>Proses Kerja Kami</h2>
+      <p>Tahapan kerja yang jelas dari awal hubungi kami sampai pekerjaan selesai terpasang.</p>
+    </div>
+    <div class="process-track reveal-stagger">
+      <div class="process-line"></div>
+      <div class="process-step">
+        <div class="circle">1</div>
+        <h4>Hubungi Kami</h4>
+        <p>Chat via WhatsApp</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">2</div>
+        <h4>Survey Lokasi</h4>
+        <p>Cek ukuran &amp; kondisi</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">3</div>
+        <h4>Penawaran Harga</h4>
+        <p>Rincian biaya jelas</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">4</div>
+        <h4>Pengerjaan</h4>
+        <p>Proses fabrikasi</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">5</div>
+        <h4>Pemasangan</h4>
+        <p>Pemasangan di lokasi</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">6</div>
+        <h4>Selesai</h4>
+        <p>Pekerjaan siap digunakan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section id="portofolio">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="section-num">04</span>
+      <div class="eyebrow" style="justify-content:center;">Portofolio</div>
+      <h2>Bukti Hasil Pekerjaan Kami</h2>
+      <p>Dokumentasi proyek pagar, kanopi, teralis dan konstruksi besi yang telah kami kerjakan.</p>
+    </div>
+
+    <div class="masonry reveal-stagger">
+      <div class="item">
+        <img src="images/proyek-tangga-1.jpg" alt="Tangga spiral - Jaya Abadi Las">
+        <div class="zoom-icon"><i data-lucide="search"></i></div>
+        <div class="label">Tangga Spiral</div>
+      </div>
+      <div class="item">
+        <img src="images/proyek-tangga-2.jpg" alt="Tangga spiral - Jaya Abadi Las">
+        <div class="zoom-icon"><i data-lucide="search"></i></div>
+        <div class="label">Tangga Spiral</div>
+      </div>
+      <div class="item">
+        <img src="images/proyek-tangga-3.jpg" alt="Tangga spiral - Jaya Abadi Las">
+        <div class="zoom-icon"><i data-lucide="search"></i></div>
+        <div class="label">Tangga Spiral</div>
+      </div>
+      <a class="item cta-card" href="https://wa.me/6281234567890?text=Halo%20Jaya%20Abadi%20Las%2C%20saya%20ingin%20melihat%20portofolio%20pekerjaan%20lainnya." target="_blank">
+        <i data-lucide="message-circle"></i>
+        <h4>Lihat Proyek Lainnya</h4>
+        <p>Hubungi kami via WhatsApp untuk melihat dokumentasi proyek pagar, kanopi, dan teralis lainnya.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIVIDER ============ -->
+<div class="container">
+  <div class="divider">
+    <span class="line"></span>
+    <span class="diamond"></span>
+    <span class="line right"></span>
+  </div>
+</div>
+
+<!-- ============ CTA BANNER ============ -->
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <h2>Punya Rencana Proyek Pagar, Kanopi, atau Konstruksi Besi?</h2>
+        <p>Konsultasikan kebutuhan Anda sekarang — gratis survey lokasi untuk area Depok dan sekitarnya.</p>
+      </div>
+      <a href="https://wa.me/6281234567890?text=Halo%20Jaya%20Abadi%20Las%2C%20saya%20ingin%20konsultasi%20dan%20survey%20lokasi%20untuk%20proyek%20saya." class="btn btn-primary" target="_blank">
+        <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+        Chat WhatsApp Sekarang
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="kontak">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="mark"><i data-lucide="flame"></i></span>
+          Jaya Abadi <span>Las</span>
+        </a>
+        <p>Jasa pembuatan dan pemasangan pagar besi, kanopi, teralis, dan konstruksi baja untuk rumah dan usaha di Depok dan sekitarnya.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/6281234567890" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Layanan Unggulan</h4>
+        <ul>
+          <li><a href="#layanan">Pagar Besi</a></li>
+          <li><a href="#layanan">Kanopi</a></li>
+          <li><a href="#layanan">Teralis</a></li>
+          <li><a href="#layanan">Folding Gate</a></li>
+          <li><a href="#layanan">Rolling Door</a></li>
+          <li><a href="#layanan">Tangga Spiral</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Area Layanan</h4>
+        <ul>
+          <li>Sawangan</li>
+          <li>Cinere</li>
+          <li>Beji</li>
+          <li>Pancoran Mas</li>
+          <li>Bojongsari</li>
+          <li>Tapos</li>
+          <li>Seluruh Depok</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kontak</h4>
+        <ul class="footer-contact">
+          <li><i data-lucide="phone"></i> 0812-3456-7890</li>
+          <li><i data-lucide="message-circle"></i> WhatsApp tersedia 7 hari</li>
+          <li><i data-lucide="map-pin"></i> Depok, Jawa Barat</li>
+          <li><i data-lucide="clock"></i> Setiap hari, 08:00 - 17:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jaya Abadi Las. Seluruh hak cipta dilindungi.</span>
+      <span>Dibuat dengan dedikasi di Depok, Indonesia.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/6281234567890?text=Halo%20Jaya%20Abadi%20Las%2C%20saya%20ingin%20bertanya." class="wa-float" target="_blank">
+  <i data-lucide="message-circle"></i>
+  <span>Chat WhatsApp</span>
+</a>
+
+<script>
+  lucide.createIcons();
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => el.classList.add('in-view'));
+  }
+</script>
+</body>
+</html>
